@@ -10,6 +10,7 @@ import matplotlib
 matplotlib.rcParams['font.family'] = 'sans-serif'
 import plotly.express as px
 import plotly.graph_objects as go
+import os
 
 # 
 # CSS CUSTOMIZADO
@@ -463,9 +464,14 @@ st.set_page_config(
 # FUNÇÕES AUXILIARES
 # 
 @st.cache_data
+
+@st.cache_data
 def carregar_dados():
-    df = pd.read_csv('../Dataset/bd_consolid_22_23_24.csv', sep=';',
-                     na_values=['—'], encoding='utf-8')
+    # Resolve o caminho do CSV a partir da localização do app.py
+    # Funciona tanto local (Windows) quanto no Streamlit Cloud (Linux)
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    caminho_csv = os.path.join(base_dir, '..', 'Dataset', 'bd_consolid_22_23_24.csv')
+    df = pd.read_csv(caminho_csv, sep=';', na_values=['—'], encoding='utf-8')
     return df
 
 def padronizar_colunas(col):
