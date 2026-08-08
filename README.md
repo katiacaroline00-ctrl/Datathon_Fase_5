@@ -39,7 +39,7 @@ Desenvolver um **modelo preditivo** capaz de calcular a probabilidade de um alun
 
 - [x] Notebook Python com análise exploratória, limpeza e modelo preditivo
 - [x] Aplicação Streamlit com deploy no Community Cloud
-- [x] Apresentação de storytelling (PPT/PDF)
+- [x] Apresentação de storytelling (PPT)
 - [x] Código-fonte versionado no GitHub
 - [x] Vídeo de apresentação (até 5 minutos)
 
