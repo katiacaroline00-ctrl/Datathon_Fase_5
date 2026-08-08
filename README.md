@@ -2,7 +2,7 @@
 
 > Projeto desenvolvido para o **Datathon da PosTech** (Pós-graduação em Data Analytics), aplicando Machine Learning e Data Analytics aos dados educacionais da Associação Passos Mágicos (2022–2024) para identificar precocemente alunos em risco de defasagem escolar.
 
-**Autora:** Katia Wilkomm  
+**Autora:** Katia Caroline Wilkomm  
 **Instituição:** PosTech — Data Analytics  
 **Case:** Associação Passos Mágicos
 
