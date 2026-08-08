@@ -629,7 +629,7 @@ if pagina == "ℹ️ Sobre a Passos Mágicos":
     # ====== LOGO ======
     col_esq, col_centro, col_dir = st.columns([2, 1, 2])
     with col_centro:
-st.image(os.path.join(BASE_DIR, 'Passos-magicos-logo.png'), use_container_width=True)
+        st.image(os.path.join(BASE_DIR, 'Passos-magicos-logo.png'), use_container_width=True)
     st.markdown("")
 
     # ====== NÚMEROS DE IMPACTO ======
