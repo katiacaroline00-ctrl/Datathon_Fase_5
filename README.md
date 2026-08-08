@@ -1,10 +1,5 @@
 # 🔮 Predição de Risco de Defasagem Escolar — Associação Passos Mágicos
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
-![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
-
 > Projeto desenvolvido para o **Datathon da PosTech** (Pós-graduação em Data Analytics), aplicando Machine Learning e Data Analytics aos dados educacionais da Associação Passos Mágicos (2022–2024) para identificar precocemente alunos em risco de defasagem escolar.
 
 **Autora:** Katia Wilkomm  
@@ -90,10 +85,3 @@ Os seguintes arquivos devem estar presentes na estrutura de pastas:
 > ⚠️ **Atenção:** O dataset contém dados sensíveis de alunos. Certifique-se de seguir as diretrizes da **LGPD (Lei Geral de Proteção de Dados)** ao manipular, armazenar e compartilhar essas informações.
 
 ---
-
-## 4. Como Executar o Projeto
-
-### Passo 1: Clonar o repositório
-```bash
-git clone https://github.com/[SUBSTITUIR: katiacaroline00]/datathon-passos-magicos.git
-cd datathon-passos-magicos
