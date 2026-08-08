@@ -119,18 +119,6 @@ Clique em Deploy
 
 
 ## 5. Estrutura do Projeto
-```text
-datathon_fase_5/
-├── Dataset/
-│   └── bd_consolid_22_23_24.csv
-├── Notebook/
-│   └── datathon_passos_magicos.ipynb
-├── Streamlit/
-│   ├── app.py
-│   ├── Passos-magicos-logo.png
-│   └── passos-magicos-icon.ico
-├── requirements.txt
-└── README.md
 
 Descrição dos arquivos
 
@@ -142,6 +130,25 @@ Descrição dos arquivos
 |pipeline.pkl|Objeto Pipeline serializado (StandardScaler + RandomForestClassifier)|
 |features.pkl|Lista de nomes das features utilizadas no treinamento|
 |requirements.txt|Lista de bibliotecas Python necessárias para executar o projeto|
+
+## 6. Funcionalidades
+### 6.1 Analise Exploratoria de Dados (11 Perguntas de Negocio)
+O notebook responde as 11 perguntas definidas no enunciado do Datathon:
+|#|Pergunta|Indicador|
+|---|---|---|
+|1|Qual e o perfil geral de defasagem dos alunos e como evolui ao longo dos anos?|IAN|
+|2|O desempenho academico medio esta melhorando, estagnado ou caindo ao longo das fases e anos?|IDA|
+|3|O grau de engajamento tem relacao direta com o desempenho e o ponto de virada?|IEG|
+|4|As percepcoes dos alunos sobre si mesmos sao coerentes com seu desempenho real?|IAA|
+|5|Ha padroes psicossociais que antecedem quedas de desempenho ou engajamento?|IPS|
+|6|As avaliacoes psicopedagogicas confirmam ou contradizem a defasagem?|IPP|
+|7|Quais comportamentos mais influenciam o Ponto de Virada ao longo do tempo?|IPV|
+|8|Quais combinacoes de indicadores elevam mais a nota global (INDE)?|INDE|
+|9|Quais padroes permitem identificar alunos em risco antes da queda no desempenho?|ML|
+|10|Os indicadores mostram melhora consistente ao longo do ciclo nas diferentes fases?|Pedras|
+|11|Insights adicionais (instituicao, genero, idade, tempo na ONG)|--|
+
+
 
 
 
