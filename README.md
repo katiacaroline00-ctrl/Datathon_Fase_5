@@ -1,8 +1,13 @@
 # 🔮 Predição de Risco de Defasagem Escolar — Associação Passos Mágicos
 
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
+![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
+
 > Projeto desenvolvido para o **Datathon da PosTech** (Pós-graduação em Data Analytics), aplicando Machine Learning e Data Analytics aos dados educacionais da Associação Passos Mágicos (2022–2024) para identificar precocemente alunos em risco de defasagem escolar.
 
-**Autora:** Katia Caroline Wilkomm  
+**Autora:** Katia Wilkomm  
 **Instituição:** PosTech — Data Analytics  
 **Case:** Associação Passos Mágicos
 
@@ -39,7 +44,7 @@ Desenvolver um **modelo preditivo** capaz de calcular a probabilidade de um alun
 
 - [x] Notebook Python com análise exploratória, limpeza e modelo preditivo
 - [x] Aplicação Streamlit com deploy no Community Cloud
-- [x] Apresentação de storytelling (PPT)
+- [x] Apresentação de storytelling (PPT/PDF)
 - [x] Código-fonte versionado no GitHub
 - [x] Vídeo de apresentação (até 5 minutos)
 
@@ -85,3 +90,86 @@ Os seguintes arquivos devem estar presentes na estrutura de pastas:
 > ⚠️ **Atenção:** O dataset contém dados sensíveis de alunos. Certifique-se de seguir as diretrizes da **LGPD (Lei Geral de Proteção de Dados)** ao manipular, armazenar e compartilhar essas informações.
 
 ---
+
+## 4. Como Executar o Projeto
+### Passo 1: Criar e ativar o ambiente virtual  
+bash # Windows python -m venv venv venv\Scripts\activate
+
+### Passo 2: Instalar as dependências
+pip install --upgrade pip
+pip install -r requirements.txt
+
+### Passo 4: Preparar o dataset
+mkdir -p Dataset
+cp [caminho_do_arquivo]/bd_consolid_22_23_24.csv Dataset/
+
+### Passo 5: Executar o notebook do modelo preditivo
+datathon_passos_magicos.ipynbExecute todas as células na ordem. Ao final, os arquivos pipeline.pkl e features.pkl serão gerados na raiz do projeto.
+
+### Passo 6: Executar a aplicação Streamlit
+streamlit run app.py
+
+### Passo 7: Deploy no Streamlit Community Cloud (opcional)
+Acesse share.streamlit.io
+Conecte sua conta do GitHub
+Selecione o repositório e o arquivo app.py
+Configure o ambiente Python e instale as dependências
+Clique em Deploy
+
+
+
+## 5. Estrutura do Projeto
+datathon-passos-magicos/
+├── Dataset/
+│   └── bd_consolid_22_23_24.csv      # Base histórica consolidada (2022–2024)
+├── Notebook/
+│   └── datathon_passos_magicos.ipynb # EDA, limpeza e desenvolvimento do modelo
+├── app.py                            # Código principal da aplicação Streamlit
+├── pipeline.pkl                      # Modelo treinado + StandardScaler (Pipeline)
+├── features.pkl                      # Lista de features utilizadas no modelo
+├── Passos-magicos-logo.png           # Identidade visual da ONG
+├── passos-magicos-icon.ico           # Ícone da aplicação web
+├── requirements.txt                  # Dependências do projeto
+└── README.md                         # Este arquivo
+
+Descrição dos arquivos
+
+|Arquivo / Pasta|Descrição|
+|---|---|
+|Dataset/|Contém o arquivo CSV com os dados consolidados de 2022, 2023 e 2024|
+|Notebook/|Notebook Jupyter com toda a análise exploratória, respostas às 11 perguntas de negócio e desenvolvimento do modelo|
+|app.py|Código-fonte da aplicação Streamlit com 3 páginas, CSS customizado e gráficos interativos|
+|pipeline.pkl|Objeto Pipeline serializado (StandardScaler + RandomForestClassifier)|
+|features.pkl|Lista de nomes das features utilizadas no treinamento|
+|requirements.txt|Lista de bibliotecas Python necessárias para executar o projeto|
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
