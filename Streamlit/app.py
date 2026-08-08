@@ -11,6 +11,7 @@ matplotlib.rcParams['font.family'] = 'sans-serif'
 import plotly.express as px
 import plotly.graph_objects as go
 import os
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # 
 # CSS CUSTOMIZADO
@@ -456,7 +457,7 @@ st.markdown("""
 # 
 st.set_page_config(
     page_title="Passos Mágicos — Predição de Risco",
-    page_icon="passos-magicos-icon.ico",
+    page_icon=os.path.join(BASE_DIR, 'passos-magicos-icon.ico'),
     layout="wide"
 )
 
@@ -628,7 +629,7 @@ if pagina == "ℹ️ Sobre a Passos Mágicos":
     # ====== LOGO ======
     col_esq, col_centro, col_dir = st.columns([2, 1, 2])
     with col_centro:
-        st.image("Passos-magicos-logo.png", use_container_width=True)
+st.image(os.path.join(BASE_DIR, 'Passos-magicos-logo.png'), use_container_width=True)
     st.markdown("")
 
     # ====== NÚMEROS DE IMPACTO ======
