@@ -119,18 +119,18 @@ Clique em Deploy
 
 
 ## 5. Estrutura do Projeto
-datathon-passos-magicos/
+```text
+datathon_fase_5/
 ├── Dataset/
-│   └── bd_consolid_22_23_24.csv      # Base histórica consolidada (2022–2024)
+│   └── bd_consolid_22_23_24.csv
 ├── Notebook/
-│   └── datathon_passos_magicos.ipynb # EDA, limpeza e desenvolvimento do modelo
-├── app.py                            # Código principal da aplicação Streamlit
-├── pipeline.pkl                      # Modelo treinado + StandardScaler (Pipeline)
-├── features.pkl                      # Lista de features utilizadas no modelo
-├── Passos-magicos-logo.png           # Identidade visual da ONG
-├── passos-magicos-icon.ico           # Ícone da aplicação web
-├── requirements.txt                  # Dependências do projeto
-└── README.md                         # Este arquivo
+│   └── datathon_passos_magicos.ipynb
+├── Streamlit/
+│   ├── app.py
+│   ├── Passos-magicos-logo.png
+│   └── passos-magicos-icon.ico
+├── requirements.txt
+└── README.md
 
 Descrição dos arquivos
 
