@@ -148,8 +148,86 @@ O notebook responde as 11 perguntas definidas no enunciado do Datathon:
 |10|Os indicadores mostram melhora consistente ao longo do ciclo nas diferentes fases?|Pedras|
 |11|Insights adicionais (instituicao, genero, idade, tempo na ONG)|--|
 
+### 6.2 Modelo Preditivo
+Algoritmo: RandomForestClassifier
+Pipeline de pre-processamento:
+StandardScaler -> RandomForestClassifier
+Hiperparametros:
+|Parametro|Valor|Justificativa|
+|---|---|---|
+|n_estimators|200|Numero de arvores na floresta|
+|max_depth|10|Profundidade maxima (controle de overfitting)|
+|min_samples_split|5|Minimo de amostras para divisao de no|
+|class_weight|balanced|Tratamento de desbalanceamento de classes|
+|random_state|42|Reprodutibilidade|
+
+Divisao dos dados:
+Treino: anos 2022 e 2023
+Teste: ano 2024 (divisao temporal para simular uso real)
+Variavel-alvo: risco_defasagem = (defas < 0).astype(int)
+
+Features utilizadas:
+•	Numericas: IAA, IEG, IPS, IDA, IPV
+•	Categoricas: Pedra, Instituicao padronizada (one-hot encoding com drop_first=True)
+Features excluidas:
+•	fase e fase_ideal -> removidas por vazamento de dados (data leakage)
+•	ipp -> excluida por inconsistencia (todos os valores = 0 em 2022)
+Metricas de avaliacao (conjunto de teste - 2024):
+
+|Metrica|Valor|Interpretacao|
+|---|---|---|
+|ROC-AUC|**0,77**|Capacidade discriminativa satisfatoria|
+|Recall (Risco)|**0,64**|64% dos alunos em risco corretamente identificados|
+|Precision (Risco)|**0,79**|79% das predicoes de risco sao corretas|
+|Average Precision|**0,83**|Desempenho robusto considerando desbalanceamento|
+
+Features mais importantes:
+1.IDA - Desempenho Academico
+2.IPV - Ponto de Virada
+3.Pedra: Topazio - Categoria de maior desempenho
+4.IEG - Engajamento
+
+### 6.3 Aplicacao Streamlit
+
+A aplicacao possui 3 paginas acessiveis via sidebar:
+Pagina 1 - Sobre a Passos Magicos
+•	Historia da ONG com timeline interativa
+•	Missao, Visao e Valores
+•	Tabela de indicadores educacionais (INDE, IAA, IEG, IPS, IDA, IPV, IAN, IPP)
+•	Sistema de classificacao por Pedras (Quartzo, Agata, Ametista, Topazio)
+•	Parcerias e atuacao (Escola Publica, Bolsas, Empresas Parceiras)
+Pagina 2 - Predicoes e Indicadores
+•	Filtros interativos: ano, instituicao, pedra, genero, fase, idade, ano de ingresso, faixa de INDE
+•	Metricas de destaque: total de registros e % em risco
+•	9 graficos interativos (Plotly): 
+1.Risco de defasagem por ano (barras)
+2.Distribuicao por Pedra (donut chart)
+3.Boxplot do INDE por Pedra
+4.Histograma do INDE
+5.Evolucao dos indicadores por ano (linhas)
+6.Matriz de correlacao entre indicadores (heatmap)
+7.Radar de indicadores por Pedra
+8.Scatter IDA vs INDE
+9.Media de indicadores por instituicao (barras agrupadas)
+Pagina 3 - Metricas do Modelo
+•	Configuracao do modelo (algoritmo, hiperparametros, divisao treino/teste)
+•	Metricas de performance (ROC-AUC, Recall, Precision, Average Precision)
+•	Top 10 features mais importantes (grafico de barras)
+•	Consideracoes finais e limitacoes
+
+## 7.Considerações Finais
+Este projeto foi desenvolvido como parte do Datathon da PosTech e tem como propósito contribuir com a missão da Associação Passos Mágicos de transformar a vida de crianças e jovens por meio da educação.
+
+A solução entregue não é apenas um exercício acadêmico, mas uma ferramenta prática de apoio à decisão que coloca a ciência de dados a serviço da equipe pedagógica. Ao identificar precocemente alunos em risco de defasagem, a ONG pode direcionar seus recursos e intervenções de forma mais eficiente, potencializando o impacto de suas ações.
 
 
+🎥 Vídeo de Apresentação | https://youtu.be/ahwumbIUD1k |
+
+👥 Autora Katia Caroline Wilkomm
+
+Projeto desenvolvido como parte do Datathon – Fase 5 da Pós-Graduação em Data Analytics da FIAP.
+
+📝 Licença: Este projeto é de uso acadêmico e não possui fins comerciais.
 
 
 
