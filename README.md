@@ -1,15 +1,12 @@
 # 🔮 Predição de Risco de Defasagem Escolar — Associação Passos Mágicos
 
-![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
-![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
-![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=Streamlit&logoColor=white)
-![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 
 > Projeto desenvolvido para o **Datathon da PosTech** (Pós-graduação em Data Analytics), aplicando Machine Learning e Data Analytics aos dados educacionais da Associação Passos Mágicos (2022–2024) para identificar precocemente alunos em risco de defasagem escolar.
 
 **Autora:** Katia Wilkomm  
 **Instituição:** PosTech — Data Analytics  
 **Case:** Associação Passos Mágicos
+**Vídeo de Apresentação:** https://youtu.be/ahwumbIUD1k 
 
 ---
 
@@ -21,10 +18,7 @@
 - [4. Como Executar o Projeto](#4-como-executar-o-projeto)
 - [5. Estrutura do Projeto](#5-estrutura-do-projeto)
 - [6. Funcionalidades](#6-funcionalidades)
-- [7. Limitações Conhecidas](#7-limitações-conhecidas)
-- [8. Contribuição](#8-contribuição)
-- [9. Licença](#9-licença)
-- [10. Considerações Finais](#10-considerações-finais)
+- [7. Considerações Finais](#7-consideracoes-finais)
 
 ---
 
@@ -119,7 +113,6 @@ Clique em Deploy
 
 
 ## 5. Estrutura do Projeto
-
 Descrição dos arquivos
 
 |Arquivo / Pasta|Descrição|
@@ -189,45 +182,38 @@ Features mais importantes:
 
 ### 6.3 Aplicacao Streamlit
 
-A aplicacao possui 3 paginas acessiveis via sidebar:
-Pagina 1 - Sobre a Passos Magicos
-- Historia da ONG com timeline interativa
-- Missao, Visao e Valores
-•	Tabela de indicadores educacionais (INDE, IAA, IEG, IPS, IDA, IPV, IAN, IPP)
-•	Sistema de classificacao por Pedras (Quartzo, Agata, Ametista, Topazio)
-•	Parcerias e atuacao (Escola Publica, Bolsas, Empresas Parceiras)
-Pagina 2 - Predicoes e Indicadores
-•	Filtros interativos: ano, instituicao, pedra, genero, fase, idade, ano de ingresso, faixa de INDE
-•	Metricas de destaque: total de registros e % em risco
-•	9 graficos interativos (Plotly): 
-'1.Risco de defasagem por ano (barras)
-2.Distribuicao por Pedra (donut chart)
-3.Boxplot do INDE por Pedra
-4.Histograma do INDE
-5.Evolucao dos indicadores por ano (linhas)
-6.Matriz de correlacao entre indicadores (heatmap)
-7.Radar de indicadores por Pedra
-8.Scatter IDA vs INDE
-9.Media de indicadores por instituicao (barras agrupadas)
-Pagina 3 - Metricas do Modelo
-•	Configuracao do modelo (algoritmo, hiperparametros, divisao treino/teste)
-•	Metricas de performance (ROC-AUC, Recall, Precision, Average Precision)
-•	Top 10 features mais importantes (grafico de barras)
-•	Consideracoes finais e limitacoes
+A aplicacao possui 3 paginas acessiveis via sidebar: 
+#### Pagina 1 - Sobre a Passos Magicos
+'- Historia da ONG com timeline interativa
+'-Missao, Visao e Valores
+'-Tabela de indicadores educacionais (INDE, IAA, IEG, IPS, IDA, IPV, IAN, IPP)
+'-Sistema de classificacao por Pedras (Quartzo, Agata, Ametista, Topazio)
+'-Parcerias e atuacao (Escola Publica, Bolsas, Empresas Parceiras)
+#### Pagina 2 - Predicoes e Indicadores
+'-Filtros interativos: ano, instituicao, pedra, genero, fase, idade, ano de ingresso, faixa de INDE
+'-Metricas de destaque: total de registros e % em risco
+'-9 graficos interativos (Plotly): 
+##### 1. Risco de defasagem por ano (barras)
+##### 2.Distribuicao por Pedra (donut chart)
+##### 3.Boxplot do INDE por Pedra
+##### 4.Histograma do INDE
+##### 5.Evolucao dos indicadores por ano (linhas)
+##### 6.Matriz de correlacao entre indicadores (heatmap)
+##### 7.Radar de indicadores por Pedra
+##### 8.Scatter IDA vs INDE
+##### 9.Media de indicadores por instituicao (barras agrupadas)
+#### Pagina 3 - Metricas do Modelo
+'-Configuracao do modelo (algoritmo, hiperparametros, divisao treino/teste)
+'-Metricas de performance (ROC-AUC, Recall, Precision, Average Precision)
+'-Top 10 features mais importantes (grafico de barras)
+'-Consideracoes finais e limitacoes
 
 ## 7.Considerações Finais
 Este projeto foi desenvolvido como parte do Datathon da PosTech e tem como propósito contribuir com a missão da Associação Passos Mágicos de transformar a vida de crianças e jovens por meio da educação.
 
 A solução entregue não é apenas um exercício acadêmico, mas uma ferramenta prática de apoio à decisão que coloca a ciência de dados a serviço da equipe pedagógica. Ao identificar precocemente alunos em risco de defasagem, a ONG pode direcionar seus recursos e intervenções de forma mais eficiente, potencializando o impacto de suas ações.
 
-
-🎥 Vídeo de Apresentação | https://youtu.be/ahwumbIUD1k |
-
-👥 Autora Katia Caroline Wilkomm
-
-Projeto desenvolvido como parte do Datathon – Fase 5 da Pós-Graduação em Data Analytics da FIAP.
-
-📝 Licença: Este projeto é de uso acadêmico e não possui fins comerciais.
+Licença: Este projeto é de uso acadêmico e não possui fins comerciais.
 
 
 
