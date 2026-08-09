@@ -1,4 +1,4 @@
-# 🔮 Predição de Risco de Defasagem Escolar — Associação Passos Mágicos
+# Predição de Risco de Defasagem Escolar — Associação Passos Mágicos
 
 
 > Projeto desenvolvido para o **Datathon da PosTech** (Pós-graduação em Data Analytics), aplicando Machine Learning e Data Analytics aos dados educacionais da Associação Passos Mágicos (2022–2024) para identificar precocemente alunos em risco de defasagem escolar.
@@ -12,13 +12,13 @@
 
 ## 📋 Sumário
 
-[1. Descrição Geral](#1-descrição-geral)
-[2. Tecnologias Utilizadas](#2-tecnologias-utilizadas)
-[3. Pré-requisitos](#3-pré-requisitos)
-[4. Como Executar o Projeto](#4-como-executar-o-projeto)
-[5. Estrutura do Projeto](#5-estrutura-do-projeto)
-[6. Funcionalidades](#6-funcionalidades)
-[7. Considerações Finais](#7-consideracoes-finais)
+[1. Descrição Geral](#1-descrição-geral)  
+[2. Tecnologias Utilizadas](#2-tecnologias-utilizadas)  
+[3. Pré-requisitos](#3-pré-requisitos)  
+[4. Como Executar o Projeto](#4-como-executar-o-projeto)  
+[5. Estrutura do Projeto](#5-estrutura-do-projeto)  
+[6. Funcionalidades](#6-funcionalidades)  
+[7. Considerações Finais](#7-consideracoes-finais)  
 
 ---
 
@@ -109,11 +109,11 @@ streamlit run app.py
 
 
 ### Passo 7: Deploy no Streamlit Community Cloud (opcional)
-Acesse share.streamlit.io
-Conecte sua conta do GitHub
-Selecione o repositório e o arquivo app.py
-Configure o ambiente Python e instale as dependências
-Clique em Deploy
+Acesse share.streamlit.io  
+Conecte sua conta do GitHub  
+Selecione o repositório e o arquivo app.py  
+Configure o ambiente Python e instale as dependências  
+Clique em Deploy  
 
 
 
@@ -164,10 +164,10 @@ Treino: anos 2022 e 2023
 Teste: ano 2024 (divisao temporal para simular uso real)  
 Variavel-alvo: risco_defasagem = (defas < 0).astype(int)  
 
-Features utilizadas:
+Features utilizadas:  
 •	Numericas: IAA, IEG, IPS, IDA, IPV  
 •	Categoricas: Pedra, Instituicao padronizada (one-hot encoding com drop_first=True)  
-Features excluidas:  
+Features excluídas:  
 •	fase e fase_ideal -> removidas por vazamento de dados (data leakage)  
 •	ipp -> excluida por inconsistencia (todos os valores = 0 em 2022)  
 Metricas de avaliacao (conjunto de teste - 2024):  
@@ -187,26 +187,26 @@ Features mais importantes:
 ### 6.3 Aplicacao Streamlit
 
 A aplicação possui 3 paginas acessíveis via sidebar: 
-#### Pagina 1 - Sobre a Passos Magicos
-'- Historia da ONG com timeline interativa  
-'-Missao, Visao e Valores  
-'-Tabela de indicadores educacionais (INDE, IAA, IEG, IPS, IDA, IPV, IAN, IPP)  
-'-Sistema de classificacao por Pedras (Quartzo, Agata, Ametista, Topazio)  
-'-Parcerias e atuacao (Escola Publica, Bolsas, Empresas Parceiras)  
-#### Pagina 2 - Predições e Indicadores
-'-Filtros interativos: ano, instituicao, pedra, genero, fase, idade, ano de ingresso, faixa de INDE  
-'-Metricas de destaque: total de registros e % em risco  
-'-9 graficos interativos (Plotly):   
+#### Página 1 - Sobre a Passos Mágicos  
+•	Historia da ONG com timeline interativa  
+•	Missao, Visao e Valores  
+•	Tabela de indicadores educacionais (INDE, IAA, IEG, IPS, IDA, IPV, IAN, IPP)  
+•	Sistema de classificacao por Pedras (Quartzo, Agata, Ametista, Topazio)  
+•	Parcerias e atuacao (Escola Publica, Bolsas, Empresas Parceiras)  
+#### Página 2 - Predições e Indicadores
+•	Filtros interativos: ano, instituicao, pedra, genero, fase, idade, ano de ingresso, faixa de INDE  
+•	Metricas de destaque: total de registros e % em risco  
+•	9 gráficos interativos (Plotly):   
 ##### 1. Risco de defasagem por ano (barras)
-##### 2.Distribuicao por Pedra (donut chart)
-##### 3.Boxplot do INDE por Pedra
-##### 4.Histograma do INDE
-##### 5.Evolucao dos indicadores por ano (linhas)
-##### 6.Matriz de correlacao entre indicadores (heatmap)
-##### 7.Radar de indicadores por Pedra
-##### 8.Scatter IDA vs INDE
-##### 9.Media de indicadores por instituicao (barras agrupadas)
-#### Pagina 3 - Metricas do Modelo
+##### 2. Distribuição por Pedra (donut chart)
+##### 3. Boxplot do INDE por Pedra
+##### 4. Histograma do INDE
+##### 5. Evolução dos indicadores por ano (linhas)
+##### 6. Matriz de correlação entre indicadores (heatmap)
+##### 7. Radar de indicadores por Pedra
+##### 8. Scatter IDA vs INDE
+##### 9. Média de indicadores por instituição (barras agrupadas)
+#### Página 3 - Metricas do Modelo
 '-Configuracao do modelo (algoritmo, hiperparametros, divisao treino/teste)  
 '-Metricas de performance (ROC-AUC, Recall, Precision, Average Precision)  
 '-Top 10 features mais importantes (grafico de barras)  
