@@ -18,7 +18,7 @@
 [4. Como Executar o Projeto](#4-como-executar-o-projeto)  
 [5. Estrutura do Projeto](#5-estrutura-do-projeto)  
 [6. Funcionalidades](#6-funcionalidades)  
-[7. Considerações Finais](#7-consideracoes-finais)  
+[7. Considerações Finais](#7-considerações-finais)  
 
 ---
 
@@ -205,46 +205,17 @@ A aplicação possui 3 paginas acessíveis via sidebar:
 ##### 6. Matriz de correlação entre indicadores (heatmap)
 ##### 7. Radar de indicadores por Pedra
 ##### 8. Scatter IDA vs INDE
-##### 9. Média de indicadores por instituição (barras agrupadas)
-#### Página 3 - Metricas do Modelo
+##### 9. Média de indicadores por instituição (barras agrupadas)  
+
+#### Página 3 - Métricas do Modelo
 '-Configuracao do modelo (algoritmo, hiperparametros, divisao treino/teste)  
 '-Metricas de performance (ROC-AUC, Recall, Precision, Average Precision)  
 '-Top 10 features mais importantes (grafico de barras)  
 '-Considerações finais e limitações  
 
-## 7.Considerações Finais
+## 7. Considerações Finais
 Este projeto foi desenvolvido como parte do Datathon da PosTech e tem como propósito contribuir com a missão da Associação Passos Mágicos de transformar a vida de crianças e jovens por meio da educação.
 
 A solução entregue não é apenas um exercício acadêmico, mas uma ferramenta prática de apoio à decisão que coloca a ciência de dados a serviço da equipe pedagógica. Ao identificar precocemente alunos em risco de defasagem, a ONG pode direcionar seus recursos e intervenções de forma mais eficiente, potencializando o impacto de suas ações.
 
 Licença: Este projeto é de uso acadêmico e não possui fins comerciais.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
