@@ -200,7 +200,7 @@ Pagina 2 - Predicoes e Indicadores
 •	Filtros interativos: ano, instituicao, pedra, genero, fase, idade, ano de ingresso, faixa de INDE
 •	Metricas de destaque: total de registros e % em risco
 •	9 graficos interativos (Plotly): 
-1.Risco de defasagem por ano (barras)
+'1.Risco de defasagem por ano (barras)
 2.Distribuicao por Pedra (donut chart)
 3.Boxplot do INDE por Pedra
 4.Histograma do INDE
