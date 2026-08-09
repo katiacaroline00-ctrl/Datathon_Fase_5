@@ -5,8 +5,8 @@
 
 **Autora:** Katia Wilkomm  
 **Instituição:** PosTech — Data Analytics  
-**Case:** Associação Passos Mágicos   
-** Aplicação Streamli:** https://pmagicosporkatiawilkomm.streamlit.app/  
+**Case:** Associação Passos Mágicos  
+**Aplicação Streamli:** https://pmagicosporkatiawilkomm.streamlit.app/  
 **Vídeo de Apresentação:** https://youtu.be/ahwumbIUD1k 
 
 ---
