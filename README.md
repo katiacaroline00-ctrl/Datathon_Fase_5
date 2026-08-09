@@ -208,10 +208,10 @@ A aplicação possui 3 paginas acessíveis via sidebar:
 ##### 9. Média de indicadores por instituição (barras agrupadas)  
 
 #### Página 3 - Métricas do Modelo
-'-Configuracao do modelo (algoritmo, hiperparametros, divisao treino/teste)  
-'-Metricas de performance (ROC-AUC, Recall, Precision, Average Precision)  
-'-Top 10 features mais importantes (grafico de barras)  
-'-Considerações finais e limitações  
+•	Configuracao do modelo (algoritmo, hiperparametros, divisao treino/teste)  
+•	Metricas de performance (ROC-AUC, Recall, Precision, Average Precision)  
+•	Top 10 features mais importantes (grafico de barras)  
+•	Considerações finais e limitações  
 
 ## 7. Considerações Finais
 Este projeto foi desenvolvido como parte do Datathon da PosTech e tem como propósito contribuir com a missão da Associação Passos Mágicos de transformar a vida de crianças e jovens por meio da educação.
