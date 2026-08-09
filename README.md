@@ -5,20 +5,20 @@
 
 **Autora:** Katia Wilkomm  
 **Instituição:** PosTech — Data Analytics  
-**Case:** Associação Passos Mágicos
+**Case:** Associação Passos Mágicos   
 **Vídeo de Apresentação:** https://youtu.be/ahwumbIUD1k 
 
 ---
 
 ## 📋 Sumário
 
-- [1. Descrição Geral](#1-descrição-geral)
-- [2. Tecnologias Utilizadas](#2-tecnologias-utilizadas)
-- [3. Pré-requisitos](#3-pré-requisitos)
-- [4. Como Executar o Projeto](#4-como-executar-o-projeto)
-- [5. Estrutura do Projeto](#5-estrutura-do-projeto)
-- [6. Funcionalidades](#6-funcionalidades)
-- [7. Considerações Finais](#7-consideracoes-finais)
+[1. Descrição Geral](#1-descrição-geral)
+[2. Tecnologias Utilizadas](#2-tecnologias-utilizadas)
+[3. Pré-requisitos](#3-pré-requisitos)
+[4. Como Executar o Projeto](#4-como-executar-o-projeto)
+[5. Estrutura do Projeto](#5-estrutura-do-projeto)
+[6. Funcionalidades](#6-funcionalidades)
+[7. Considerações Finais](#7-consideracoes-finais)
 
 ---
 
@@ -89,19 +89,24 @@ Os seguintes arquivos devem estar presentes na estrutura de pastas:
 ### Passo 1: Criar e ativar o ambiente virtual  
 bash # Windows python -m venv venv venv\Scripts\activate
 
+
 ### Passo 2: Instalar as dependências
 pip install --upgrade pip
 pip install -r requirements.txt
+
 
 ### Passo 4: Preparar o dataset
 mkdir -p Dataset
 cp [caminho_do_arquivo]/bd_consolid_22_23_24.csv Dataset/
 
+
 ### Passo 5: Executar o notebook do modelo preditivo
 datathon_passos_magicos.ipynbExecute todas as células na ordem. Ao final, os arquivos pipeline.pkl e features.pkl serão gerados na raiz do projeto.
 
+
 ### Passo 6: Executar a aplicação Streamlit
 streamlit run app.py
+
 
 ### Passo 7: Deploy no Streamlit Community Cloud (opcional)
 Acesse share.streamlit.io
@@ -142,10 +147,10 @@ O notebook responde as 11 perguntas definidas no enunciado do Datathon:
 |11|Insights adicionais (instituicao, genero, idade, tempo na ONG)|--|
 
 ### 6.2 Modelo Preditivo
-Algoritmo: RandomForestClassifier
-Pipeline de pre-processamento:
-StandardScaler -> RandomForestClassifier
-Hiperparametros:
+Algoritmo: RandomForestClassifier  
+Pipeline de pre-processamento:  
+StandardScaler -> RandomForestClassifier  
+Hiperparametros:  
 |Parametro|Valor|Justificativa|
 |---|---|---|
 |n_estimators|200|Numero de arvores na floresta|
@@ -154,19 +159,18 @@ Hiperparametros:
 |class_weight|balanced|Tratamento de desbalanceamento de classes|
 |random_state|42|Reprodutibilidade|
 
-Divisao dos dados:
-Treino: anos 2022 e 2023
-Teste: ano 2024 (divisao temporal para simular uso real)
-Variavel-alvo: risco_defasagem = (defas < 0).astype(int)
+Divisão dos dados:  
+Treino: anos 2022 e 2023  
+Teste: ano 2024 (divisao temporal para simular uso real)  
+Variavel-alvo: risco_defasagem = (defas < 0).astype(int)  
 
 Features utilizadas:
-•	Numericas: IAA, IEG, IPS, IDA, IPV
-•	Categoricas: Pedra, Instituicao padronizada (one-hot encoding com drop_first=True)
-Features excluidas:
-•	fase e fase_ideal -> removidas por vazamento de dados (data leakage)
-•	ipp -> excluida por inconsistencia (todos os valores = 0 em 2022)
-Metricas de avaliacao (conjunto de teste - 2024):
-
+•	Numericas: IAA, IEG, IPS, IDA, IPV  
+•	Categoricas: Pedra, Instituicao padronizada (one-hot encoding com drop_first=True)  
+Features excluidas:  
+•	fase e fase_ideal -> removidas por vazamento de dados (data leakage)  
+•	ipp -> excluida por inconsistencia (todos os valores = 0 em 2022)  
+Metricas de avaliacao (conjunto de teste - 2024):  
 |Metrica|Valor|Interpretacao|
 |---|---|---|
 |ROC-AUC|**0,77**|Capacidade discriminativa satisfatoria|
@@ -174,25 +178,25 @@ Metricas de avaliacao (conjunto de teste - 2024):
 |Precision (Risco)|**0,79**|79% das predicoes de risco sao corretas|
 |Average Precision|**0,83**|Desempenho robusto considerando desbalanceamento|
 
-Features mais importantes:
-1.IDA - Desempenho Academico
-2.IPV - Ponto de Virada
-3.Pedra: Topazio - Categoria de maior desempenho
-4.IEG - Engajamento
+Features mais importantes:  
+1.IDA - Desempenho Academico  
+2.IPV - Ponto de Virada  
+3.Pedra: Topazio - Categoria de maior desempenho  
+4.IEG - Engajamento  
 
 ### 6.3 Aplicacao Streamlit
 
-A aplicacao possui 3 paginas acessiveis via sidebar: 
+A aplicação possui 3 paginas acessíveis via sidebar: 
 #### Pagina 1 - Sobre a Passos Magicos
-'- Historia da ONG com timeline interativa
-'-Missao, Visao e Valores
-'-Tabela de indicadores educacionais (INDE, IAA, IEG, IPS, IDA, IPV, IAN, IPP)
-'-Sistema de classificacao por Pedras (Quartzo, Agata, Ametista, Topazio)
-'-Parcerias e atuacao (Escola Publica, Bolsas, Empresas Parceiras)
-#### Pagina 2 - Predicoes e Indicadores
-'-Filtros interativos: ano, instituicao, pedra, genero, fase, idade, ano de ingresso, faixa de INDE
-'-Metricas de destaque: total de registros e % em risco
-'-9 graficos interativos (Plotly): 
+'- Historia da ONG com timeline interativa  
+'-Missao, Visao e Valores  
+'-Tabela de indicadores educacionais (INDE, IAA, IEG, IPS, IDA, IPV, IAN, IPP)  
+'-Sistema de classificacao por Pedras (Quartzo, Agata, Ametista, Topazio)  
+'-Parcerias e atuacao (Escola Publica, Bolsas, Empresas Parceiras)  
+#### Pagina 2 - Predições e Indicadores
+'-Filtros interativos: ano, instituicao, pedra, genero, fase, idade, ano de ingresso, faixa de INDE  
+'-Metricas de destaque: total de registros e % em risco  
+'-9 graficos interativos (Plotly):   
 ##### 1. Risco de defasagem por ano (barras)
 ##### 2.Distribuicao por Pedra (donut chart)
 ##### 3.Boxplot do INDE por Pedra
@@ -203,10 +207,10 @@ A aplicacao possui 3 paginas acessiveis via sidebar:
 ##### 8.Scatter IDA vs INDE
 ##### 9.Media de indicadores por instituicao (barras agrupadas)
 #### Pagina 3 - Metricas do Modelo
-'-Configuracao do modelo (algoritmo, hiperparametros, divisao treino/teste)
-'-Metricas de performance (ROC-AUC, Recall, Precision, Average Precision)
-'-Top 10 features mais importantes (grafico de barras)
-'-Consideracoes finais e limitacoes
+'-Configuracao do modelo (algoritmo, hiperparametros, divisao treino/teste)  
+'-Metricas de performance (ROC-AUC, Recall, Precision, Average Precision)  
+'-Top 10 features mais importantes (grafico de barras)  
+'-Considerações finais e limitações  
 
 ## 7.Considerações Finais
 Este projeto foi desenvolvido como parte do Datathon da PosTech e tem como propósito contribuir com a missão da Associação Passos Mágicos de transformar a vida de crianças e jovens por meio da educação.
