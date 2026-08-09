@@ -191,8 +191,8 @@ Features mais importantes:
 
 A aplicacao possui 3 paginas acessiveis via sidebar:
 Pagina 1 - Sobre a Passos Magicos
-•	Historia da ONG com timeline interativa
-•	Missao, Visao e Valores
+- Historia da ONG com timeline interativa
+- Missao, Visao e Valores
 •	Tabela de indicadores educacionais (INDE, IAA, IEG, IPS, IDA, IPV, IAN, IPP)
 •	Sistema de classificacao por Pedras (Quartzo, Agata, Ametista, Topazio)
 •	Parcerias e atuacao (Escola Publica, Bolsas, Empresas Parceiras)
