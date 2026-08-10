@@ -7,7 +7,7 @@
 **Instituição:** PosTech — Data Analytics  
 **Case:** Associação Passos Mágicos  
 **Aplicação Streamli:** https://pmagicosporkatiawilkomm.streamlit.app/  
-**Vídeo de Apresentação:** https://youtu.be/ahwumbIUD1k 
+**Vídeo de Apresentação:** https://youtu.be/hksckUmRcJo
 
 ---
 
